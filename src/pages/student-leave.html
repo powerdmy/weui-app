@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>学生请假</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!--引入weui-->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.1/style/weui.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.0.1/css/jquery-weui.min.css">
+    <!--项目css-->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="student-leave">
+    <div class="weui-cells" style="margin-top:0;">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <p>请假人</p>
+            </div>
+            <div class="weui-cell__ft">刘萌萌</div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <p>开始时间</p>
+            </div>
+            <div class="weui-cell__ft">2017-07-26 15:40:22</div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <p>结束时间</p>
+            </div>
+            <div class="weui-cell__ft">2017-07-26 15:40:38</div>
+        </div>
+    </div>
+    <div class="weui-cells__title">请假原因</div>
+    <div class="weui-cells">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <p class="s-l-text">老师你好，孩子因为感冒，所以今天请假，多谢批准！师你好，孩子因为感冒，所以今天请假，多谢批准！师你好，孩子因为感冒，所以今天请假，多谢批准！师你好，孩子因为感冒，所以今天请假，多谢批准！</p>
+                <div class="s-l-img-wrap">
+                    <img src="../images/person.png" alt="">
+                    <img src="../images/person.png" alt="">
+                    <img src="../images/person.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--未处理-->
+    <div class="weui-cells__title">审批</div>
+    <div class="weui-cells">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <textarea class="weui-textarea" placeholder="请输审批内容" rows="3"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="weui-flex">
+        <div class="weui-flex__item a-c-btn-wrap">
+            <a href="javascript:;" class="weui-btn weui-btn_primary" style="margin-top:0;">同意</a>
+        </div>
+        <div class="weui-flex__item a-c-btn-wrap">
+            <a href="javascript:;" class="weui-btn weui-btn_plain-primary" style="margin-top:0;">不同意</a>
+        </div>
+    </div>
+
+    <!--已处理-->
+    <div class="weui-cells">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <p class="s-l-text">已同意，天气炎热，请照顾你的孩子</p>
+            </div>
+        </div>
+    </div>
+    <div class="a-c-btn-wrap">
+        <a href="javascript:" class="weui-btn weui-btn_disabled weui-btn_primary">已同意</a>
+    </div>
+    <!--footer-->
+    <div class="weui-footer">
+        <p class="weui-footer__text">Copyright © 2009-2017 广东德诚网络科技有限公司</p>
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-weui/1.0.1/js/jquery-weui.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-weui/1.0.1/js/swiper.min.js"></script>
+<script>
+    // 图片全屏浏览
+    var pb = $.photoBrowser({
+        items: [
+            "../images/person.png",
+            "../images/master.jpg",
+            "../images/school.jpg"
+        ]
+    });
+    $('.s-l-img-wrap').click(function() {
+        pb.open();
+    })
+</script>
+
+</html>

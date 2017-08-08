@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>考试列表</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../css/font-awesome.css">
+    <!--引入weui-->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.1/style/weui.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.0.1/css/jquery-weui.min.css">
+    <!--项目css-->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="test-table-wrap">
+        <div class="title-wrap">
+            <h3>高三年级第一次模拟考试</h3>
+            <p><span class="weui-badge orange-badge" style="margin-right: 5px;margin-bottom:4px;">全科目</span>2017-07-27 09:02:53</p>
+        </div>
+        <div class="table-main">
+            <div class="weui-flex">
+                <div class="weui-flex__item">全科目</div>
+                <div class="weui-flex__item">平均分</div>
+                <div class="weui-flex__item">最高分</div>
+                <div class="weui-flex__item">最低分</div>
+            </div>
+            <div class="weui-flex bottom-flex">
+                <div class="weui-flex__item">分数</div>
+                <div class="weui-flex__item">86</div>
+                <div class="weui-flex__item">98</div>
+                <div class="weui-flex__item">74</div>
+            </div>
+        </div>
+        <p class="table-tip">*此次考试共有686人参加</p>
+    </div>
+    <p class="t-order-title">排行榜<input type="text" id="class" placeholder="查询班级详情"></p>
+    <!--排行榜-->
+    <div class="test-order-list">
+        <div class="weui-flex order-list_title">
+            <div class="weui-flex__item">排名</div>
+            <div class="weui-flex__item">姓名</div>
+            <div class="weui-flex__item">成绩</div>
+            <div class="weui-flex__item">详情</div>
+        </div>
+        <a class="weui-flex order-list_item" href="javascript:">
+            <div class="weui-flex__item"><i class="fa fa-trophy" aria-hidden="true"></i></div>
+            <div class="weui-flex__item">李磊</div>
+            <div class="weui-flex__item">225</div>
+            <div class="weui-flex__item"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+        </a>
+        <a class="weui-flex order-list_item" href="javascript:">
+            <div class="weui-flex__item"><i class="fa fa-trophy" aria-hidden="true"></i></div>
+            <div class="weui-flex__item">李磊</div>
+            <div class="weui-flex__item">225</div>
+            <div class="weui-flex__item"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+        </a>
+        <a class="weui-flex order-list_item" href="javascript:">
+            <div class="weui-flex__item"><i class="fa fa-trophy" aria-hidden="true"></i></div>
+            <div class="weui-flex__item">李磊</div>
+            <div class="weui-flex__item">225</div>
+            <div class="weui-flex__item"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+        </a>
+        <a class="weui-flex order-list_item" href="javascript:">
+            <div class="weui-flex__item">4</div>
+            <div class="weui-flex__item">李磊</div>
+            <div class="weui-flex__item">225</div>
+            <div class="weui-flex__item"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+        </a>
+        <a class="weui-flex order-list_item" href="javascript:">
+            <div class="weui-flex__item">5</div>
+            <div class="weui-flex__item">李磊</div>
+            <div class="weui-flex__item">225</div>
+            <div class="weui-flex__item"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+        </a>
+        <a class="weui-flex order-list_item" href="javascript:">
+            <div class="weui-flex__item">6</div>
+            <div class="weui-flex__item">李磊</div>
+            <div class="weui-flex__item">225</div>
+            <div class="weui-flex__item"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+        </a>
+        <a class="weui-flex order-list_item" href="javascript:">
+            <div class="weui-flex__item">7</div>
+            <div class="weui-flex__item">李磊</div>
+            <div class="weui-flex__item">225</div>
+            <div class="weui-flex__item"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+        </a>
+    </div>
+    <!--footer-->
+    <div class="weui-footer">
+        <p class="weui-footer__text">Copyright © 2009-2017 广东德诚网络科技有限公司</p>
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-weui/1.0.1/js/jquery-weui.min.js"></script>
+<script>
+    $("#class").picker({
+        title: "请选择您的班级",
+        cols: [{
+            textAlign: 'center',
+            values: ['全体高三班级', '高一二班', '高一三班', '高一一班']
+        }]
+    });
+</script>
+
+</html>

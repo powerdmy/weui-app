@@ -1,0 +1,11 @@
+# medical_system
+
+node_modules/
+platforms/
+plugins/
+bower_components/
+
+.tmp/
+src/sass/
+
+

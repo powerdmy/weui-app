@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>相册详情</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../css/font-awesome.css">
+    <!--引入weui-->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.1/style/weui.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.0.1/css/jquery-weui.min.css">
+    <!--项目css-->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="a-d-top">
+        <img src="../images/class-pic.jpg" alt="">
+        <div class="a-d-top-text">
+            <div class="top-text_item">
+                <h4>学校圈</h4>
+                <p>记录学校的点点滴滴</p>
+            </div>
+            <span class="a-d-top-num">15张照片</span>
+        </div>
+    </div>
+    <div class="a-c-btn-wrap c-a-bg-f">
+        <a href="upload-album.html" class="weui-btn weui-btn_plain-primary">上传照片</a>
+    </div>
+    <!--照片列表-->
+    <div class="a-d-img-wrap">
+        <p class="a-d-time">2017-07-28</p>
+        <div class="weui-flex">
+            <a class="weui-flex__item" href="album-slider.html">
+                <img src="../images/fang.png" alt="">
+            </a>
+            <a class="weui-flex__item" href="album-slider.html">
+                <img src="../images/fang.png" alt="">
+            </a>
+            <a class="weui-flex__item" href="album-slider.html">
+                <img src="../images/fang.png" alt="">
+            </a>
+        </div>
+        <div class="weui-flex">
+            <a class="weui-flex__item" href="album-slider.html">
+                <img src="../images/fang.png" alt="">
+            </a>
+            <a class="weui-flex__item" href="album-slider.html">
+                <img src="../images/fang.png" alt="">
+            </a>
+            <a class="weui-flex__item" href="album-slider.html">
+                <img src="../images/fang.png" alt="">
+            </a>
+        </div>
+        <p class="a-d-time">2017-07-28</p>
+        <div class="weui-flex">
+            <a class="weui-flex__item" href="album-slider.html">
+                <img src="../images/fang.png" alt="">
+            </a>
+            <a class="weui-flex__item" href="album-slider.html">
+                <img src="../images/fang.png" alt="">
+            </a>
+            <a class="weui-flex__item" href="album-slider.html">
+                <img src="../images/fang.png" alt="">
+            </a>
+        </div>
+    </div>
+    <!--footer-->
+    <div class="weui-footer">
+        <p class="weui-footer__text">Copyright © 2009-2017 广东德诚网络科技有限公司</p>
+    </div>
+    <!--comment-->
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-weui/1.0.1/js/jquery-weui.min.js"></script>
+<script>
+    $(function() {
+        // 调整图片大小
+        reHeight();
+
+        function reHeight() {
+            var width = $('.a-d-img-wrap').find('.weui-flex__item').width();
+            $('.a-d-img-wrap').find('.weui-flex__item').css('height', width);
+        }
+        $(window).resize(function() {
+            reHeight();
+        })
+    })
+</script>
+
+</html>

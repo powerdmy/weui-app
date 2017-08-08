@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>考勤查询</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../css/font-awesome.css">
+    <!--引入weui-->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.1/style/weui.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.0.1/css/jquery-weui.min.css">
+    <!--项目css-->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!--搜索栏-->
+    <div class="weui-search-bar" id="searchBar">
+        <form class="weui-search-bar__form">
+            <div class="weui-search-bar__box">
+                <i class="weui-icon-search"></i>
+                <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索" required="">
+                <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+            </div>
+            <label class="weui-search-bar__label" id="searchText">
+                <i class="weui-icon-search"></i>
+                <span>搜索</span>
+            </label>
+        </form>
+        <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
+    </div>
+
+    <div class="weui-cells" style="margin-top:0;">
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label for="name" class="weui-label"><i class="fa fa-user" aria-hidden="true"></i>考勤对象</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" id="sel-person" type="text" value="" placeholder="点击选择考勤对象">
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label for="time-inline" class="weui-label"><i class="fa fa-clock-o" aria-hidden="true"></i>考勤日期</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" id="time-inline" type="text" value="" placeholder="点击选择考勤日期">
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <p>班级人数</p>
+            </div>
+            <div class="weui-cell__ft">35人</div>
+        </div>
+    </div>
+    <div class="weui-cells__title">查询结果</div>
+    <div class="weui-cells">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <p>无记录</p>
+            </div>
+            <div class="weui-cell__ft a-c-num">3人</div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <p class="a-c-text-name">盛飞飞，陈洁，李小萌</p>
+            </div>
+        </div>
+    </div>
+    <div class="weui-cells__title">刷卡记录</div>
+    <div class="weui-cells">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <p>姓名</p>
+            </div>
+            <div class="a-c-item-wrap">刷卡记录</div>
+        </div>
+        <div class="weui-cell a-c-list-item">
+            <div class="weui-cell__bd">
+                <p>王小明</p>
+            </div>
+            <div class="a-c-item-wrap">07:32 11:58</div>
+        </div>
+        <div class="weui-cell a-c-list-item">
+            <div class="weui-cell__bd">
+                <p>王小明</p>
+            </div>
+            <div class="a-c-item-wrap">07:32 11:58</div>
+        </div>
+        <div class="weui-cell a-c-list-item">
+            <div class="weui-cell__bd">
+                <p>王小明</p>
+            </div>
+            <div class="a-c-item-wrap">07:32 11:58</div>
+        </div>
+    </div>
+
+    <div class="weui-cells__title">迟到记录</div>
+    <div class="weui-cells">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <p>姓名</p>
+            </div>
+            <div class="a-c-item-wrap">迟到记录（4次）</div>
+        </div>
+        <div class="weui-cell a-c-list-item">
+            <div class="weui-cell__bd">
+                <p>王小明</p>
+            </div>
+            <div class="a-c-item-wrap">2017-07-26 15:25:55</div>
+        </div>
+        <div class="weui-cell a-c-list-item">
+            <div class="weui-cell__bd">
+                <p>王小明</p>
+            </div>
+            <div class="a-c-item-wrap">2017-07-26 15:25:55</div>
+        </div>
+        <div class="weui-cell a-c-list-item">
+            <div class="weui-cell__bd">
+                <p>王小明</p>
+            </div>
+            <div class="a-c-item-wrap">2017-07-26 15:25:55</div>
+        </div>
+    </div>
+    <div class="a-c-btn-wrap">
+        <a href="javascript:;" class="weui-btn weui-btn_primary" style="margin-top:0;">查询</a>
+    </div>
+    <!--footer-->
+    <div class="weui-footer">
+        <p class="weui-footer__text">Copyright © 2009-2017 广东德诚网络科技有限公司</p>
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-weui/1.0.1/js/jquery-weui.min.js"></script>
+<script>
+    // 时间选择
+    $("#time-inline").calendar();
+    // 调查对象
+    $("#sel-person").picker({
+        title: "请选择你查询的班级",
+        cols: [{
+            textAlign: 'center',
+            values: ['高三三班', '高三二班', '高三一班']
+        }]
+    });
+</script>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>综合问卷</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../css/font-awesome.css">
+    <!--引入weui-->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.1/style/weui.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.0.1/css/jquery-weui.min.css">
+    <!--项目css-->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+
+    <div class="weui-cells weui-cells_form" style="margin-top:0;">
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">调查标题</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" placeholder="请输入调查标题">
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <textarea class="weui-textarea" placeholder="请输入调查简介" rows="3"></textarea>
+                <div class="weui-textarea-counter"><span>0</span>/200</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="weui-cells weui-cells_form">
+        <a class="weui-cell weui-cell_access" href="javascript:;">
+            <div class="weui-cell__hd"></div>
+            <div class="weui-cell__bd">
+                <p>添加语音</p>
+            </div>
+            <div class="weui-cell__ft">说明文字</div>
+        </a>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label for="time-inline" class="weui-label"><i class="fa fa-clock-o" aria-hidden="true"></i>截至时间</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" id="time-inline" type="text" value="" placeholder="点击选择截至时间">
+            </div>
+        </div>
+    </div>
+
+    <div class="weui-cells weui-cells_form">
+        <div class="weui-cell weui-cell_switch">
+            <div class="weui-cell__bd">匿名调查</div>
+            <div class="weui-cell__ft">
+                <input class="weui-switch" type="checkbox">
+            </div>
+        </div>
+        <div class="weui-cell weui-cell_switch">
+            <div class="weui-cell__bd">参与人可查看结果</div>
+            <div class="weui-cell__ft">
+                <label for="switchCP" class="weui-switch-cp">
+                                <input id="switchCP" class="weui-switch-cp__input" type="checkbox" checked="checked">
+                                <div class="weui-switch-cp__box"></div>
+                            </label>
+            </div>
+        </div>
+    </div>
+    <div class="weui-cells weui-cells_form">
+        <div class="weui-cells__title">问题列表，带*为必答题</div>
+        <div class="weui-cells">
+            <a class="weui-cell weui-cell_access" href="javascript:;">
+                <div class="weui-cell__bd">
+                    <p><span class="weui-badge" style="margin-right: 5px;margin-bottom:4px;background-color:#db6400">单选</span><span class="tip-require">*</span>1.你认为现在的学生有多高</p>
+                </div>
+                <div class="weui-cell__ft">
+                </div>
+            </a>
+            <a class="weui-cell weui-cell_access" href="javascript:;">
+                <div class="weui-cell__bd">
+                    <p><span class="weui-badge" style="margin-right: 5px;margin-bottom:4px;background-color:#db6400">单选</span><span class="tip-require">*</span>2.你认为现在的学生有多高</p>
+                </div>
+                <div class="weui-cell__ft">
+                </div>
+            </a>
+            <div class="weui-cell r-add-item">
+                <a href="#">新增选项+</a>
+            </div>
+        </div>
+    </div>
+    <div class="weui-flex">
+        <div class="weui-flex__item a-c-btn-wrap">
+            <a href="preview-que.html" class="weui-btn weui-btn_primary" style="margin-top:0;">保存并预览</a>
+        </div>
+        <div class="weui-flex__item a-c-btn-wrap">
+            <a href="javascript:;" class="weui-btn weui-btn_plain-primary" style="margin-top:0;">发布</a>
+        </div>
+    </div>
+    <!--footer-->
+    <div class="weui-footer">
+        <p class="weui-footer__text">Copyright © 2009-2017 广东德诚网络科技有限公司</p>
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-weui/1.0.1/js/jquery-weui.min.js"></script>
+<script>
+    //  时间选择
+    $("#time-inline").datetimePicker()
+        // 调查对象
+    $("#sel-person").select({
+        title: "选择问卷调查对象",
+        multi: true,
+        items: [{
+            title: "张三",
+            value: "001",
+        }, {
+            title: "李东",
+            value: "002",
+        }, {
+            title: "李晓明",
+            value: "003",
+        }]
+    });
+</script>
+
+</html>

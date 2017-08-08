@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>微官网</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!--引入weui-->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.1/style/weui.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.0.1/css/jquery-weui.min.css">
+    <!--项目css-->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="index">
+    <!--幻灯片-->
+    <div class="swiper-container" data-space-between='10' data-pagination='.swiper-pagination' data-autoplay="1000">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="../images/school.jpg" alt="">
+                <p class="slide-text">华师情</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="../images/school.jpg" alt="">
+                <p class="slide-text">华师情</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="../images/school.jpg" alt="">
+                <p class="slide-text">华师情</p>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <!--导航-->
+    <div class="weui-flex index-nav">
+        <a class="weui-flex__item" href="school-intro.html">
+            <img src="../images/index-nav-logo1.png" alt="">
+            <span>学校简介</span>
+        </a>
+        <a class="weui-flex__item" href="school-master.html">
+            <img src="../images/index-nav-logo2.png" alt="">
+            <span>校长措辞</span>
+        </a>
+        <a class="weui-flex__item" href="teacher-show.html">
+            <img src="../images/index-nav-logo3.png" alt="">
+            <span>教师风采</span>
+        </a>
+        <a class="weui-flex__item" href="school-honor.html">
+            <img src="../images/index-nav-logo4.png" alt="">
+            <span>学校荣誉</span>
+        </a>
+    </div>
+    <!--学校新闻-->
+    <div class="weui-panel weui-panel_access">
+        <div class="weui-panel__hd">学校新闻</div>
+        <div class="weui-panel__bd">
+            <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
+                <div class="weui-media-box__hd">
+                    <img class="weui-media-box__thumb" src="../images/new-pic.png">
+                </div>
+                <div class="weui-media-box__bd">
+                    <h4 class="weui-media-box__title">标题一</h4>
+                    <p class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+                </div>
+            </a>
+            <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
+                <div class="weui-media-box__hd">
+                    <img class="weui-media-box__thumb" src="../images/new-pic.png">
+                </div>
+                <div class="weui-media-box__bd">
+                    <h4 class="weui-media-box__title">标题二</h4>
+                    <p class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+                </div>
+            </a>
+        </div>
+        <div class="weui-panel__ft">
+            <a href="school-new.html" class="weui-cell weui-cell_access weui-cell_link">
+                <div class="weui-cell__bd">查看更多</div>
+                <span class="weui-cell__ft"></span>
+            </a>
+        </div>
+    </div>
+    <!--公告通知-->
+    <div class="weui-panel weui-panel_access">
+        <div class="weui-panel__hd">公告通知</div>
+        <div class="weui-panel__bd">
+            <a class="weui-cell weui-cell_access" href="javascript:;">
+                <div class="weui-cell__bd">
+                    <p><span class="index-news-badge">[新]</span>2017年英语四六级报考信息</p>
+                </div>
+                <div class="weui-cell__ft">
+                </div>
+            </a>
+            <a class="weui-cell weui-cell_access" href="javascript:;">
+                <div class="weui-cell__bd">
+                    <p>2017年英语四六级报考信息</p>
+                </div>
+                <div class="weui-cell__ft">
+                </div>
+            </a>
+        </div>
+        <div class="weui-panel__ft">
+            <a href="school-notice.html" class="weui-cell weui-cell_access weui-cell_link">
+                <div class="weui-cell__bd">查看更多</div>
+                <span class="weui-cell__ft"></span>
+            </a>
+        </div>
+    </div>
+    <!--footer-->
+    <div class="weui-footer">
+        <p class="weui-footer__text">Copyright © 2009-2017 广东德诚网络科技有限公司</p>
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-weui/1.0.1/js/jquery-weui.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-weui/1.0.1/js/swiper.min.js"></script>
+<!--幻灯片-->
+<script>
+    $(".swiper-container").swiper({
+        loop: true,
+        autoplay: 3000
+    });
+</script>
+
+</html>

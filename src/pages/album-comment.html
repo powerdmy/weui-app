@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>班级相册</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../css/font-awesome.css">
+    <!--引入weui-->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.1/style/weui.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.0.1/css/jquery-weui.min.css">
+    <!--项目css-->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="comment-head">
+        <div class="c-h-img">
+            <img src="../images/person.png" alt="">
+        </div>
+        <div class="c-h-text">
+            <h4>王小明</h4>
+            <p>上传于 2017/07/18</p>
+        </div>
+    </div>
+    <div class="comment-main">
+        <p>高三物理组，合照</p>
+        <img src="../images/class-pic.jpg" alt="">
+        <div class="c-m-tip">
+            <span><i class="fa fa-picture-o" aria-hidden="true"></i>《学校圈》</span>
+            <p class="c-m-tip-btn">
+                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                <i class="fa fa-commenting-o" aria-hidden="true"></i>
+            </p>
+        </div>
+        <div class="comment-text">
+            <p><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>李晓华、郑成功、郭富城</p>
+            <a class="comment-text_item open-popup" data-target="#reply" href="javascript:"><span>李晓华：</span>赞一个，嘿嘿</a>
+            <a class="comment-text_item open-popup" data-target="#reply" href="javascript:"><span>李晓华</span>回复<span>陈杰</span>：赞一个，嘿嘿</a>
+        </div>
+    </div>
+    <!--输入框-->
+    <div class="input-wrap">
+        <input type="text" placeholder="评论">
+        <a href="javascript:;">评论</a>
+    </div>
+    <!--回复弹窗-->
+    <div id="reply" class="weui-popup__container popup-bottom">
+        <div class="weui-popup__overlay"></div>
+        <div class="weui-popup__modal">
+            <div class="weui-cells weui-cells_form">
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <textarea class="weui-textarea" placeholder="回复陈杰:" rows="5"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="button_sp_area">
+                <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">取消</a>
+                <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_primary">回复</a>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-weui/1.0.1/js/jquery-weui.min.js"></script>
+<script src="../js/fastclick.js"></script>
+<script>
+    $(function() {
+        FastClick.attach(document.body);
+        // 点击取消关闭弹窗
+        $('.button_sp_area').find('a').eq(0).click(function() {
+            $.closePopup();
+        })
+    });
+</script>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>上传照片</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!--引入weui-->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.1/style/weui.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.0.1/css/jquery-weui.min.css">
+    <!--项目css-->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="weui-cells weui-cells_form first-cells">
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label for="album" class="weui-label">相册选择<i class="fa fa-angle-down" aria-hidden="true" style="color:#333;"></i></label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" id="album" type="text" value="" readonly="" placeholder="选择上传相册">
+            </div>
+        </div>
+    </div>
+    <div class="upload-wrap">
+        <div class="weui-uploader__bd">
+            <ul class="weui-uploader__files" id="uploaderFiles">
+                <li class="weui-uploader__file weui-uploader__file_status">
+                    <img src="../images/fang.png" alt="">
+                    <div class="weui-uploader__file-content">
+                        <i class="weui-icon-cancel"></i>
+                    </div>
+                </li>
+                <li class="weui-uploader__file weui-uploader__file_status">
+                    <div class="weui-uploader__file-content">
+                        <i class="weui-icon-cancel"></i>
+                    </div>
+                </li>
+                <li class="weui-uploader__file weui-uploader__file_status">
+                    <div class="weui-uploader__file-content">50%</div>
+                </li>
+            </ul>
+            <div class="weui-uploader__input-box">
+                <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+            </div>
+        </div>
+    </div>
+    <div class="a-c-btn-wrap">
+        <a href="javascript:;" class="weui-btn weui-btn_primary close-popup">上传</a>
+    </div>
+
+    <!--footer-->
+    <div class="weui-footer">
+        <p class="weui-footer__text">Copyright © 2009-2017 广东德诚网络科技有限公司</p>
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-weui/1.0.1/js/jquery-weui.min.js"></script>
+<script src="../js/upload.js"></script>
+
+<script>
+    $("#album").select({
+        title: "选择上传的相册",
+        items: ["学校圈", "朋友圈", "生活圈", "家人"],
+        multi: true
+    });
+</script>
+
+</html>

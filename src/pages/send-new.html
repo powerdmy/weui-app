@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>发送消息</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../css/font-awesome.css">
+    <!--引入weui-->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.1/style/weui.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.0.1/css/jquery-weui.min.css">
+    <!--项目css-->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="send-news">
+    <div class="weui-cells weui-cells_form">
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">标题</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" placeholder="请输入消息标题">
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <textarea class="weui-textarea" placeholder="请输入文本" rows="3"></textarea>
+                <div class="weui-textarea-counter"><span>0</span>/200</div>
+            </div>
+        </div>
+        <div class="upload-wrap">
+            <div class="weui-uploader__bd">
+                <ul class="weui-uploader__files" id="uploaderFiles">
+                    <li class="weui-uploader__file weui-uploader__file_status">
+                        <img src="../images/fang.png" alt="">
+                        <div class="weui-uploader__file-content">
+                            <i class="weui-icon-cancel"></i>
+                        </div>
+                    </li>
+                    <li class="weui-uploader__file weui-uploader__file_status">
+                        <div class="weui-uploader__file-content">
+                            <i class="weui-icon-cancel"></i>
+                        </div>
+                    </li>
+                    <li class="weui-uploader__file weui-uploader__file_status">
+                        <div class="weui-uploader__file-content">50%</div>
+                    </li>
+                </ul>
+                <div class="weui-uploader__input-box">
+                    <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                </div>
+            </div>
+        </div>
+        <a class="weui-cell weui-cell_access" href="javascript:;">
+            <div class="weui-cell__hd">
+                </i>
+            </div>
+            <div class="weui-cell__bd">
+                <p>添加语音</p>
+            </div>
+            <div class="weui-cell__ft">说明文字</div>
+        </a>
+    </div>
+
+    <div class="weui-cells">
+        <a class="weui-cell weui-cell_access open-popup" href="javascript:;" data-target="#full">
+            <div class="weui-cell__hd"><i class="fa fa-user" aria-hidden="true"></i></div>
+            <div class="weui-cell__bd">
+                <p>选择发送对象</p>
+            </div>
+            <div class="weui-cell__ft">未选择</div>
+        </a>
+        <div class="weui-cells_checkbox s-checkbox-border">
+            <label class="weui-cell weui-check__label" for="x1">
+                <div class="weui-cell__bd">
+                <p><i class="fa fa-share-square-o" aria-hidden="true" style="margin-right:6px"></i>定时发送</p>
+                </div>
+                <div class="weui-cell__ft">
+                <input type="checkbox" class="weui-check time-check" name="radio1" id="x1">
+                <span class="weui-icon-checked"></span>
+                </div>
+            </label>
+        </div>
+        <div class="weui-cells weui-cells_form time-form s-checkbox-border" style="display:none">
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label for="time-inline" class="weui-label"><i class="fa fa-clock-o" aria-hidden="true"></i>发送时间</label></div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" id="time-inline" type="text" value="" placeholder="点击选择发送时间">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="a-c-btn-wrap">
+        <a href="javascript:;" class="weui-btn weui-btn_primary">发布</a>
+    </div>
+    <!--footer-->
+    <div class="weui-footer">
+        <p class="weui-footer__text">Copyright © 2009-2017 广东德诚网络科技有限公司</p>
+    </div>
+
+    <!--弹窗-->
+    <div id="full" class="weui-popup__container">
+        <div class="weui-popup__overlay"></div>
+        <div class="weui-popup__modal">
+            <header class='s-header'>
+                <h1>选择发送对象</h1>
+            </header>
+
+            <div class="weui-cells weui-cells_form">
+                <div class="weui-cell">
+                    <div class="weui-cell__hd"><label for="name" class="weui-label">语文课组</label></div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" id="class" type="text" value="" placeholder="点击选择">
+                    </div>
+                </div>
+            </div>
+
+            <div class="weui-cells weui-cells_form">
+                <div class="weui-cell">
+                    <div class="weui-cell__hd"><label for="name" class="weui-label">未分组人员</label></div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" id="class" type="text" value="" placeholder="点击选择">
+                    </div>
+                </div>
+            </div>
+            <div class="a-c-btn-wrap">
+                <a href="javascript:;" class="weui-btn weui-btn_primary close-popup">确认</a>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-weui/1.0.1/js/jquery-weui.min.js"></script>
+<script src="../js/upload.js"></script>
+
+<script>
+    // 多选框
+    $("#class").select({
+        title: "选择收件人",
+        multi: true,
+        items: [{
+            title: "张三",
+            value: "001",
+        }, {
+            title: "李东",
+            value: "002",
+        }, {
+            title: "李晓明",
+            value: "003",
+        }]
+    });
+
+    // 定时发送
+    $("#time-inline").datetimePicker()
+    $('.time-check').change(function() {
+        if ($(this).prop('checked')) {
+            $('.time-form').show();
+        } else {
+            $('.time-form').hide();
+        }
+    })
+</script>
+
+</html>

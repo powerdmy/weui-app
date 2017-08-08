@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>班级相册</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../css/font-awesome.css">
+    <!--引入weui-->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.1/style/weui.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.0.1/css/jquery-weui.min.css">
+    <!--项目css-->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+</head>
+<style>
+    html,
+    body {
+        position: relative;
+        height: 100%;
+    }
+    
+    body {
+        background: #000;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .swiper-slide {
+        font-size: 18px;
+        background: #000;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    
+    .swiper-pagination-fraction {
+        color: #fff;
+        top: 15px;
+        font-size: 0.9rem;
+        bottom: 4rem;
+    }
+</style>
+<!--图片浏览器-->
+
+<body class="album-slider">
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="../images/class-pic.jpg" alt="">
+                <div class="slider-item-bot">
+                    <p class="slider-item-text">高三物理组合照</p>
+                    <a href="album-comment.html">
+                        <span>
+                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                        <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                    </span>
+                        <p>
+                            评1 赞2
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="../images/fang.png" alt="">
+                <div class="slider-item-bot">
+                    <p class="slider-item-text">高三物理组合照</p>
+                    <a href="album-comment.html">
+                        <span>
+                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                        <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                    </span>
+                        <p>
+                            评1 赞2
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="../images/school.jpg" alt="">
+                <div class="slider-item-bot">
+                    <p class="slider-item-text">高三物理组合照</p>
+                    <a href="album-comment.html">
+                        <span>
+                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                        <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                    </span>
+                        <p>
+                            评1 赞2
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="../js/swiper.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationType: 'fraction',
+        paginationClickable: true
+    });
+</script>
+
+</html>
