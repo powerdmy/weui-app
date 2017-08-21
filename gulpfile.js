@@ -93,6 +93,7 @@ gulp.task('browser-sync', function() {
     }
   });
   gulp.watch('./src/pages/*.html').on('change', reload);
+  gulp.watch('./src/newpages/*.html').on('change', reload);
   gulp.watch('./src/*.html').on('change', reload);//监听html文件
   gulp.watch('./src/css/*.css').on('change', reload);//监听css文件
   gulp.watch('./src/js/*.js').on('change', reload);//监听js文件

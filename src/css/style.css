@@ -455,3 +455,54 @@ label[for="teacher"] .fa { margin-left: 6px; color: #333; }
 .upload-wrap .weui-icon-cancel { color: #fff; font-size: 28px; }
 
 .upload-wrap .weui-uploader__file img { width: 79px; height: 79px; }
+
+/* 新增页面CSS */
+.que1-img-wrap { margin-top: 15px; margin-left: 10px; }
+
+.que1-img-wrap .weui-flex__item { margin-right: 10px; }
+
+.que1-img-wrap img { width: 100%; height: 100%; }
+
+.que1-wran { display: inline-block; color: #264e86; margin-left: 20px; font-size: 14px; }
+
+.p-pre-info .p-warn { color: #ea4242; font-size: 14px; }
+
+.slider-wrap { padding: 10px 5px; background-color: #fff; margin-top: 15px; }
+
+.que3-panel { max-height: 300px; margin-top: 10px; overflow-y: scroll; }
+
+.que3-panel_item { background-color: #fff; margin: 10px; border-radius: 6px; }
+
+.que3-panel_item .main-txt { padding: 10px; }
+
+.que3-panel_item .top { line-height: 35px; height: 35px; padding: 4px 10px; border-bottom: 1px solid #eee; }
+
+.que3-panel_item .top span:first-child { text-align: left; color: #999; font-size: 14px; }
+
+.que3-panel_item .top span:last-child { color: #999; float: right; font-size: 14px; }
+
+.que3-panel_item .top img { width: 25px; height: 25px; display: inline-block; vertical-align: middle; margin-right: 5px; }
+
+.que6-form .weui-cell__bd p { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; max-width: 300px; }
+
+.hide { display: none; }
+
+.que7-wrap { background-color: #ffffff; padding: 10px; }
+
+.que7-wrap p { font-size: 18px; margin-bottom: 6px; margin-top: 10px; }
+
+.que7-wrap p span { color: #db6400; font-size: 16px; display: inline-block; margin-left: 10px; }
+
+.que7-wrap .weui-progress__bar { height: 20px; border-radius: 4px; }
+
+.que7-wrap .weui-progress__bar .weui-progress__inner-bar { border-radius: 4px; }
+
+.que7-wrap .que7-info { margin-top: 15px; color: #999; font-size: 14px; }
+
+.que7-wrap .que7-info a { float: right; color: #16427e; font-size: 16px; }
+
+.que7-wrap .grade-title { text-align: center; font-size: 18px; color: #db6400; }
+
+.que7-wrap .weui-slider__inner { height: 8px; border-radius: 2px; }
+
+.que7-wrap .weui-slider__track { height: 8px; border-radius: 2px; }
