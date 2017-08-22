@@ -489,6 +489,8 @@ label[for="teacher"] .fa { margin-left: 6px; color: #333; }
 
 .que7-wrap { background-color: #ffffff; padding: 10px; }
 
+.que7-wrap p.reply { margin: 0; }
+
 .que7-wrap p { font-size: 18px; margin-bottom: 6px; margin-top: 10px; }
 
 .que7-wrap p span { color: #db6400; font-size: 16px; display: inline-block; margin-left: 10px; }
@@ -506,3 +508,11 @@ label[for="teacher"] .fa { margin-left: 6px; color: #333; }
 .que7-wrap .weui-slider__inner { height: 8px; border-radius: 2px; }
 
 .que7-wrap .weui-slider__track { height: 8px; border-radius: 2px; }
+
+.que-item { margin-bottom: 15px; }
+
+.que-item .weui-cell:nth-child(2) { padding: 0 15px 6px 15px; }
+
+.que-item .weui-cell:before { height: 0; border-top: none; }
+
+.que-cell_wrap .que-del { position: absolute; right: -64px; top: 0; color: #ffffff; padding: 10px 15px; background-color: #ea4242; }
